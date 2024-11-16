@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raport</title>
+  </head>
+  <body>
+    <article resource="#" typeof="schema:ScholarlyArticle">
+      <header>
+        <h1 property="schema:name">InfoX - Raport</h1>
+        <p role="doc-subtitle" property="schema:alternateName">
+          - Informații despre implementarea proiectului -
+        </p>
+        <div role="contentinfo">
+          <section typeof="sa:AuthorsList">
+            <h2>Autori</h2>
+            <ul>
+              <li typeof="sa:ContribuitorRole" property="schema:author">
+                <span typeof="schema:Person">
+                  <meta property="schema:givenName" content="Oana" />
+                  <meta property="schema:additionalName" content="Vasilica" />
+                  <meta property="schema:familyName" content="Tataru" />
+                  <span property="schema:name">Oana-Vasilica Tataru</span>
+                </span>
+                <a
+                  href="#uni"
+                  property="sa:roleAffiliation"
+                  resource="https://www.uaic.ro"
+                  >FII</a
+                >
+              </li>
+              <li typeof="sa:ContribuitorRole" property="schema:author">
+                <span typeof="schema:Person">
+                  <meta property="schema:givenName" content="Daniela" />
+                  <meta property="schema:familyName" content="Rusu" />
+                  <span property="schema:name">Daniela Rusu</span>
+                </span>
+                <a
+                  href="#uni"
+                  property="sa:roleAffiliation"
+                  resource="https://www.uaic.ro"
+                  >FII</a
+                >
+              </li>
+            </ul>
+          </section>
+        </div>
+      </header>
+      <div>
+        <section role="doc-introduction">
+          <h2>Introducere</h2>
+          <section>
+            <h3>1.1. Scop</h3>
+            <p>
+              Proiectul nostru vrea să vină în sprijinul sistemului educațional
+              românesc, oferind o platformă educațională adresată profesorilor
+              de informatică și elevilor de la ciclul liceal, profil
+              matematică-informatică. Elevii vor avea astfel acces la o
+              multitudine de probleme de informatică (C++ exclusiv) de diverse
+              grade de dificulate, ce acoperă întreaga curriculă a claselor
+              IX-XI al profilului liceal matematică-intensiv informatică, având
+              de asemenea acces și la indicii de rezolvare și soluții ale
+              acestora. Profesorii vor putea crea clase cu proprii elevi,
+              putându-le acorda de asemenea și teme custom.
+            </p>
+            <p>
+              Implementarea noastră reprezintă un modul al acestei aplicații
+              complexe, aceasta ocupâdu-se exclusiv de problemele oferite de
+              aplicația noastră și a funcțiilor necesare creării, editării,
+              managementului și rezolvării acestora.
+            </p>
+          </section>
+          <section>
+            <h3>1.2. Convenții ale Documentului</h3>
+            <p>
+              Acest document destinat specificației cerințelor software (SRS)
+              este scris în conformitate cu Scholarly HTML, un standard de
+              formatare și specificații tipografice. Acest standard oferă metode
+              de structurare și stilizare a documentelor pentru a asigura
+              consistența și lizibilitate.
+            </p>
+          </section>
+          <section>
+            <h3>1.3. Publicul Vizat si Sugestii de Lectură</h3>
+            <p>
+              Acest document este adresat persoanelor în domeniu ce doresc să
+              înțeleagă detaliile tehnice ale proiectului sau să contribuie
+              activ la dezvoltarea viitoare a acestuia.
+            </p>
+          </section>
+          <section>
+            <h3>1.4. Scopul Produsului</h3>
+            <p>
+              Scopul principal al produsului este de a oferi un mediu
+              educațional prielnic unei dezvoltări trainice ale cunoștințelor și
+              abilităților de programare in C++ ale noilor generații, atât prin
+              studiu individual, cât și prin temele acordate de profesorul de
+              informatică de la clasă. În acest sens, elevii vor avea acces la o
+              varietate de probleme de informatică, însoțite de indicii și
+              soluții ce pot fi deblocate prin bani fictivi, obținuți din
+              rezolvarea problemelor, sistem ce încurajează elevul să
+              persevereze în rezolvarea problemeor cu grad de dificultate
+              ridicat. De asemenea, noi probleme vor fi introduse regulat de
+              către persoane autorizate, pentru ca elevii să aibă permanent
+              acces la o varietate de probleme de abordat.
+            </p>
+          </section>
+          <section role="doc-bibliography">
+            <h3>1.5. Referințe</h3>
+            <ol>
+              <li
+                typeof="schema:WebPage"
+                role="doc-biblioentry"
+                property="schema:citation"
+                id="scholarlyhtml"
+              >
+                <cite property="schema:name"
+                  ><a
+                    href="https://w3c.github.io/scholarly-html/"
+                    property="schema:citation"
+                    >Scholarly HTML</a
+                  ></cite
+                >
+                de
+                <span property="schema:author" typeof="schema:Organization"
+                  ><span property="schema:name"
+                    >Scholarly HTML Community Group</span
+                  ></span
+                >
+              </li>
+              <li
+                typeof="schema:WebPage"
+                role="doc-biblioentry"
+                property="schema:citation"
+                id="ieeesrstemplate"
+              >
+                <cite property="schema:name"
+                  ><a
+                    href="https://github.com/rick4470/IEEE-SRS-Tempate"
+                    property="schema:citation"
+                    >IEEE SRS Template</a
+                  ></cite
+                >
+                de
+                <span property="schema:author" typeof="schema:Organization"
+                  ><span property="schema:name">IEEE</span></span
+                >
+              </li>
+              <li
+                typeof="schema:WebPage"
+                role="doc-biblioentry"
+                property="schema:citation"
+              >
+                <cite property="schema:name"
+                  ><a
+                    href="https://www.flaticon.com/"
+                    property="schema:citation"
+                    >Vector icons & stickers</a
+                  ></cite
+                >
+                de
+                <span property="schema:author" typeof="schema:Organization"
+                  ><span property="schema:name">Flaticon</span></span
+                >
+              </li>
+              <li
+                typeof="schema:WebPage"
+                role="doc-biblioentry"
+                property="schema:citation"
+                id="lottiefiles"
+              >
+                <cite property="schema:name"
+                  ><a href="https://lottiefiles.com/" property="schema:citation"
+                    >Lightweight, scalable animations</a
+                  ></cite
+                >
+                de
+                <span property="schema:author" typeof="schema:Organization"
+                  ><span property="schema:name">LottieFiles</span></span
+                >
+              </li>
+              <li
+                typeof="schema:WebPage"
+                role="doc-biblioentry"
+                property="schema:citation"
+              >
+                <cite property="schema:name"
+                  ><a
+                    href="https://www.geeksforgeeks.org/css-syntax/?ref=lbp"
+                    property="schema:citation"
+                    >CSS Syntax</a
+                  ></cite
+                >
+                de
+                <span property="schema:author" typeof="schema:Organization"
+                  ><span property="schema:name">GeeksforGeeks</span></span
+                >
+              </li>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <h2>Descriere Generală</h2>
+          <section>
+            <h3>2.1. Perspectiva Produsului</h3>
+            <p>
+              Acest produs reprezintă o parte a unui sistem complex, el
+              reprezentând doar modulul de probleme al aplicației web. Alte
+              componente importante pentru aplicație reprezintă modulul de
+              compilare și cel de administrare a profesorilor, împreună cu
+              funcțiile oferite acestora. Astfel, produsul de față nu este menit
+              funcționării independente, ci drept parte a unei platforme
+              educaționale complexe, pentru a oferi utilizatorilor o experiență
+              diversă și constructivă.
+            </p>
+          </section>
+          <section>
+            <h3>2.2. Functiile Produsului</h3>
+            <p>
+              Modulul de față aduce în prim-plan următoarele componente majore:
+            </p>
+            <ul>
+              <li>
+                căutarea intuitivă și facilă a problemelor, atât prin
+                organizarea lor în ani de studiu, capitole și subcapitole, cât
+                și prin sisteme de filtrare dezvoltate corespunzător
+              </li>
+              <li>
+                accesarea unei probleme spre rezolvare, însoțită de indicii și
+                soluții spre deblocare
+              </li>
+              <li>
+                continuarea aprofundării capitolelor cele mai frecventate în
+                ultima perioadă
+              </li>
+              <li>
+                recomandarea a 3 probleme noi/populare de interes pentru
+                utilizator
+              </li>
+              <li>
+                funcții de creare, editare și administrare a problemelor proprii
+                pentru utilizatorii cu acest drept
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>2.3. Clase de Utilizatori și Caracteristicile Acestora</h3>
+            <p>
+              În acest modul nu există funcționalități specifice profesorilor,
+              așa că nu vom lua în considerare această categorie de utilizatori.
+            </p>
+            <p>
+              Astfel, înafară de aceștia, produsul de față permite următoarele
+              clase de utilizatori:
+            </p>
+            <ul>
+              <li>
+                Utilizatori obișnuiți: Orice persoană ce dorește să se
+                familiarizeze cu programarea sau vrea să-și consolideze
+                abilitățile de programare în C++ își poate crea un cont pe
+                această aplicație și poate aborda orice categorie de probleme
+                spre rezolvare.
+              </li>
+              <li>
+                Elevi: Elevii, în special cei de liceu, cu specializare în
+                matematică-informatică, pot accesa această platformă la
+                îndrumarea profesorului de informatică pentru a exersa și
+                consolida informațiile oferite la clasă, fie din dorință
+                proprie, fie prin rezolvarea unor probleme propuse drept temă de
+                către profesor.
+              </li>
+              <li>
+                Creatori de probleme: Utilizatorii cărora li s-a oferit această
+                atribuție de către administratorul aplicației pot crea și edita
+                probleme, care vor fi lansate pe aplicație după ce sunt
+                aprobate.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>2.4. Mediu de Operare</h3>
+            <p>
+              Proiectul nostru reprezintă o aplicație web destinată în principal
+              pentru desktop, dar poate rula pe diverse tipuri de dispozitive,
+              cu anumite restricții. În principiu, aplicația poate rula pe
+              dispozitive cu ecran redus, fiind permise doar funcții de
+              vizualizare: se pot căuta și vizualiza probleme, dar nu se pot
+              rezolva ori modifica.
+            </p>
+          </section>
+          <section>
+            <h3>2.5. Constrângeri de Proiectare și Implementare</h3>
+            <p>
+              Aplicația este în prezent în curs de dezvoltare și nu știm cu
+              certitudine ce necesități vor apărea, dar presupunem că vom avea
+              nevoie de următoarele:
+            </p>
+            <ul>
+              <li>Politici de reglementare</li>
+              <li>Limitații hardware</li>
+              <li>Diferite tehnologii, instrumente și baze de date</li>
+              <li>Securitate</li>
+              <li>Convenții de proiectare și standarde de programare</li>
+            </ul>
+          </section>
+          <section>
+            <h3>2.6. Documentația Utilizatorului</h3>
+            <p>
+              Datorită naturii intuitive a aplicației, interfețele clare și
+              funcționalităților ușor de înțeles, nu va fi disponibil vreun
+              document formal precum un manual de utilizator sau tutoriale.
+              Considerăm că orice utilizator va putea avea o experiență plăcută
+              folosind această platformă, fără a fi nevoie să se ajute de vreun
+              ghid al aplicației.
+            </p>
+          </section>
+          <section>
+            <h3>2.7. Presupuneri și Dependințe</h3>
+            <p>Presupuneri:</p>
+            <ul>
+              <li>
+                Dispozitive cu ecran mare: Se presupune că utilizatorii doresc
+                să rezolve probleme, nu doar să vizualizeze cerința, iar pentru
+                acest lucru este necesară accesarea aplicației de pe un laptop
+                sau desktop.
+              </li>
+              <li>
+                Conexiune stabilă la internet: Se presupune că utilizatorii
+                dispun de o conexiune bună la internet pentru a avea acces la
+                aplicația web fără inconveniente.
+              </li>
+            </ul>
+            <p>Dependințe:</p>
+            <ul>
+              <li>
+                Existența altor module: Acest proiect reprezintă un modul al
+                unei aplicații complexe, deci este necesară existența și
+                funcționarea celorlalte module pentru a oferi o experiență
+                completă utilizatorului.
+              </li>
+              <li>
+                Hosting și infrastructura: Implementarea cu succes a aplicației
+                se bazează pe servicii de hosting și infrastructură
+                corespunzătoare.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Cerințe ale Interfeței Externe</h2>
+          <section>
+            <h3>3.1. Interfețe Utilizator</h3>
+            <section>
+              <h4>3.1.1. Pagina Principală - Utilizator Neautentificat</h4>
+              <p>
+                Aceasta este prima pagină la care are acces utilizatorul
+                neautentificat: ea reprezintă o descriere atractivă a
+                serviciilor oferite de aplicație, constituind primul pas către
+                câștigarea unui nou utilizator.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/landing-page.png"
+                alt="landing-page"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>
+                3.1.2. Autentificare: Login, Înregistrare, Recuperarea Parolei
+              </h4>
+              <p>
+                Această pagină se ocupă de tot procesul de autentificare,
+                utilizatorul interacționând cu aplicația prin intermediul unor
+                popup-uri pentru a se înregistra/autentifica, cât și pentru a-și
+                putea recupera parola în caz de pierdere.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/login-popup.png"
+                alt="loginPopup"
+                style="width: 60%; margin-left: 20%"
+              />
+              <img
+                src="./images_for_doc/signup-popup.png"
+                alt="signupPopup"
+                style="width: 60%; margin-left: 20%"
+              />
+              <img
+                src="./images_for_doc/resetPasword-popup.png"
+                alt="resetPasswordPopup"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.3. Pagina Principală - Utilizator Autentificat</h4>
+              <p>
+                Această pagină apare exact după autentificare, utilizatorii
+                fiind întâmpinați de un mesaj de bun venit urmat de numărul de
+                bănuți pe care îi au în posesie. Mai mult decât atât,
+                utilizatorii mai vechi pot reveni la capitolele de interes din
+                ultima perioadă și primesc 3 probleme recomandate spre abordare
+                pe baza activității lor curente.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/landing-page-logged.png"
+                alt="landingPageLogged"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.4. Pagină Probleme - Anii de Studiu</h4>
+              <p>
+                Accesată prin apăsarea butonului "Probleme" din meniul din
+                partea de sus a ecranului, această pagină afișează anii de
+                studiu pentru care există probleme în aplicație (clasele IX-XI),
+                pe baza cărora utilizatorul poate naviga către subiectele sale
+                de interes.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/problem-chapters.png"
+                alt="problemChapters"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.5. Pagină Probleme - Capitole și Subcapitole</h4>
+              <p>
+                Prin accesarea uneia dintre clasele de studiu de pe pagina
+                anterioară, utilizatorul poate filtra tipul problemelor după
+                capitolul și subcapitolul dorit, putând vizualiza și procentajul
+                din problemele existente pe care le-a rezolvat pentru fiecare
+                subcapitol în parte.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/chapters-subchapters.png"
+                alt="chaptersSubchapters"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.6. Pagină Listare Probleme</h4>
+              <p>
+                După accesarea unui subcapitol, utilizatorul este direcționat pe
+                această pagină, unde sunt afișate toate problemele existente sub
+                formă de carduri. Fiecărei probleme îi sunt atașate informații
+                sumare relevante, precum un rezumat al cerinței, autorul și
+                numărul de bănuți.
+              </p>
+              <p>
+                De asemenea, în partea de sus a paginii există și o secțiune de
+                filtrare, în cazul în care utilizatorul dorește să caute o
+                categorie total diferită de probleme (an, capitol, subcapitol)
+                fără a fi necesară navigarea prin alte pagini.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/problem-listing.png"
+                alt="problemListing"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.7. Pagină Problemă</h4>
+              <p>
+                Prin accesarea cardului atașat unei probleme, se ajunge la
+                această pagină, unde sunt afișate toate informațiile necesare
+                rezolvării problemei respective (chiar și indicii), precum și un
+                spațiu rezervat pentru scrierea codului sau introducerea
+                acestuia sub formă de fișier de pe dispozitivul utilizat.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/problem-solve.png"
+                alt="problemSolve"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.8. Pagina Problemă - Soluții</h4>
+              <p>
+                În partea de sus a paginii de vizualizare a problemei există un
+                buton numit "Soluții", care te redirecționează pe o pagină unde
+                poți vedea cele mai bune trei soluții ale utilizatorului, dacă
+                există. De asemenea, contra unui număr de bănuți (plătiți o
+                singură dată, nu la fiecare accesare), utilizatorul poate
+                vizualiza soluția oficială a problemei.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/solutions.png"
+                alt="solutions"
+                style="width: 60%; margin-left: 20%"
+              />
+              <img
+                src="./images_for_doc/solutions-unlock.png"
+                alt="solutionUnlock"
+                style="width: 60%; margin-left: 20%"
+              />
+              <img
+                src="./images_for_doc/solution-viewer.png"
+                alt="solutionViewer"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.9. Pagina Creator Probleme</h4>
+              <p>
+                Utilizatorilor care au permisiunea de a propune probleme le
+                apare o secțiune nouă în meniu (dropdown -> Problemele mele),
+                unde sunt întâmpinați de o pagină de administrare a problemelor
+                proprii (dacă există).
+              </p>
+              <p>
+                În partea de sus a paginii poate observa o statistică a
+                problemelor propuse versus aprobate. În continuarea ei sunt
+                afișate toate problemele sale sub formă de carduri, cu un icon
+                în colțul dreapta sus unde este precizat statusul ei (aprobat
+                sau nu) și un buton de editare a problemei în colțul dreapta jos
+                al cardului. De asemenea, adăugarea unei probleme noi se poate
+                face prin apăsarea butonului "plus" din colțul dreapta jos al
+                ecranului.
+              </p>
+              <p>Imagine descriptiva:</p>
+              <img
+                src="./images_for_doc/problem-creator.png"
+                alt="problemCreator"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.10. Pagina Creare Problema</h4>
+              <p>
+                Prin apăsarea butonului "plus" a paginii precedente,
+                utilizatorul este direcționat către un formular pentru crearea
+                unei noi probleme. Acesta conține titlul, tipul problemei
+                (funcție sau program), cerința problemei (abstract și complet),
+                indicii de rezolvare, soluția oficială a problemei (+ template
+                pentru main în cazul în care problema este o funcție), categoria
+                problemei (an, capitol, subcapitol), constrângerile de execuție
+                (timp, memorie, stivă), output. Formularul se încheie cu un
+                buton "Creare", la apăsarea căruia se creează noua problemă.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/new_problem.png"
+                alt="newProblem"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+            <section>
+              <h4>3.1.11. Pagina Editare Problemă</h4>
+              <p>
+                Prin apăsarea butonului "Edit" atașat oricăreia dintre
+                problemele existente, utilizatorul este direcționat către un
+                formular identic ca și conținut cu cel de la crearea problemei,
+                în care toate datele sunt completate cu cele existente deja
+                pentru problema respectivă. După editarea datelor, ele sunt
+                actualizate după ce utilizatorul apasă butonul "Modifică" de la
+                sfârșitul formularului.
+              </p>
+              <p>Imagine descriptivă:</p>
+              <img
+                src="./images_for_doc/problem-edit.png"
+                alt="editProblem"
+                style="width: 60%; margin-left: 20%"
+              />
+            </section>
+          </section>
+          <section>
+            <h3>3.2. Interfețe Software</h3>
+            <p>
+              Pentru crearea interfeței, am utilizat HTML5 (pentru structurarea
+              conținutului paginilor web), CSS pentru stilizarea elementelor
+              HTML și a crea un aspect vizual plăcut, JavaScript pentru
+              interactivitate și funcționalități dinamice. Pentru code-editor,
+              am folosit biblioteca Ace din JavaScript, pentru a facilita
+              scrierea codului în editor (identare, evidențierea sintaxei prin
+              culori). Pe partea de backend am folosit PHP pentru gestionarea
+              interacțiunii cu clientul, generarea conținutului dinamic al
+              paginilor și accesarea informațiilor din baza de date (MySql).
+            </p>
+          </section>
+        </section>
+        <section>
+          <h2>Caracteristicile Sistemului</h2>
+          <section>
+            <h3>4.1. Pagina Principală - Utilizator Neautentificat</h3>
+            <p>
+              Această pagină nu conține prea multe funcții relevante pentru
+              utilizator, având mai mult un caracter informativ. Singurele
+              funcții sunt butoanele de Înregistrare (amplasat în centrul
+              paginii la accesare) și Autentificare (amplasat în bara de meniu,
+              în partea din dreapta). Icon-ul din partea stângă a meniului nu
+              are o funcționalitate aparte, el redirecționând utilizatorul la
+              pagina curentă.
+            </p>
+          </section>
+          <section>
+            <h3>
+              4.2. Autentificare: Login, Înregistrare, Recuperarea Parolei
+            </h3>
+            <p>
+              Prin intermediul butonului "Autentificare" menționat anterior,
+              utilizatorul este redirecționat către un popup pentru
+              autentificare, unde îi sunt cerute adresa de email și parola. În
+              cazul în care utilizatorul nu are un cont încă, acesta poate apăsa
+              pe "Sign up" și este redirecționat către un nou popup unde își
+              poate crea un cont nou prin introducerea adresei de email și a
+              parolei dorite de două ori, pentru verificare. Tot pe popup-ul de
+              logare, dacă utilizatorul și-a uitat parola, acesta poate apăsa pe
+              "Forgot password" și se deschide un nou popup, unde este informat
+              că i-a fost trimis un email pentru resetarea parolei.
+            </p>
+            <p>
+              Cu ajutorul butonului "Înregistrare" menționat mai sus,
+              utilizatorul este direcționat direct către popup-ul de "Sign up"
+              menționat anterior, unde își poate crea noul cont.
+            </p>
+          </section>
+          <section>
+            <h3>4.3. Pagina Principală - Utilizator Autentificat</h3>
+            <p>
+              Funcționalitatea acestei pagini este mai diversă, având
+              următoarele componente:
+            </p>
+            <ul>
+              <li>
+                Meniul: Comun tuturor paginilor de acum înainte (îl vom menționa
+                doar acum), dispus de la stânga spre dreapta, acesta conține:
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    Un icon al site-ului, la apăsarea căreia utilizatorul este
+                    direcționat către această pagină
+                  </li>
+                  <li>
+                    Un buton Probleme, ce direcționează utlizatorul către pagina
+                    cu probleme pe anii de studiu (vezi 4.4)
+                  </li>
+                  <li>
+                    O bară de căutare, unde utilizatorul poate căuta probleme
+                    după nume
+                  </li>
+                  <li>
+                    Icon-ul utilizatorului cu efect de dropdown, la apăsarea
+                    căruia apare o caseta cu icon-ul, numele utilizatorului și
+                    suma de bani de care dispune
+                  </li>
+                  <li>
+                    Un icon tip hamburger, la apăsarea căruia apare un dropdown
+                    cu următoarele secțiuni: Cont (neimplementat), Profil
+                    (neimplementat), Profesor (parte a altui modul), Problemele
+                    mele (vizibil doar utilizatorilor cu această funcție; duce
+                    către pagina de administrare a problemelor, vezi 4.9), Log
+                    out (duce către 4.1).
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Secțiunea "Continuă unde ai rămas" conține 2 capitole cele mai
+                frecventate recent. Pentru fiecare dintre ele, este afișat
+                procentul de probleme rezolvate. La apăsarea unuia dintre
+                capitole, utilizatorul este direcționat către pagina de afișare
+                a subcapitolelor respective (vezi 4.5).
+              </li>
+              <li>
+                Secțiunea "Noi probleme pentru tine" conține 3 probleme
+                noi/populare neabordate, de interes pentru utilizator (bazate pe
+                cele 2 capitole afișate anterior).
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>4.4. Pagina Principală - Pagina Probleme - Anii de Studiu</h3>
+            <p>
+              Această pagină afișează 3 containere dispuse în linie, fiecare
+              corespunzător unui an de studiu. La apăsarea oricăruia dintre ele,
+              utilizatorul este trimis către pagina cu capitole și subcapitole
+              destinate acelui an (vezi 4.5).
+            </p>
+          </section>
+          <section>
+            <h3>
+              4.5. Pagina Principală - Pagina Probleme - Capitole și Subcapitole
+            </h3>
+            <p>
+              Această pagină este împărțită în două sectiuni: una în care sunt
+              afișate toate capitolele anului respectiv (cu 3 butoane pentru
+              navigare la oricare dintre ani deasupra), și una în care sunt
+              afișate toate subcapitolele corespunzătoare. Inițial, capitolul 1
+              și subcapitolele sale sunt selectate, iar prin selectarea altui
+              capitol apar și subcapitolele corespunzătoare acestuia. La
+              apăsarea unuia dintre subcapitole, utilizatorul este trimis către
+              pagina de listare a tuturor problemelor asociate subcapitolului
+              respectiv (vezi 4.6).
+            </p>
+          </section>
+          <section>
+            <h3>4.6. Pagina Listare Probleme</h3>
+            <p>
+              Această pagină conține în partea de sus un filtru unde sunt
+              selectate automat anul, capitolul și subcapitolul. Sub filtru sunt
+              afișate toate problemele sub forma de carduri. Se pot selecta
+              orice an, capitol sau subcapitol pe baza filtrului, iar orice
+              problemă accesată va redirecționa utilizatorul către pagina
+              dedicată problemei respective (vezi 4.7).
+            </p>
+          </section>
+          <section>
+            <h3>4.7. Pagina Problema</h3>
+            <p>
+              Această pagină conține, în esență, doar partea de introducere a
+              codului (highlighted conform limbajului de programare C++), urmată
+              de un buton de "Submit" ce preia codul și îl compilează (modul
+              separat de proiectul de față), afișând rezultatul și numărul de
+              bani primiți. De asemenea, utilizatorul poate selecta un fișier ca
+              input prin intermediul butonului "Choose File".
+            </p>
+            <p>
+              De asemenea, în partea de sus a paginii este butonul Soluții, ce
+              duce catre soluțiile disponibile acelei probleme (vezi 4.8)
+            </p>
+          </section>
+          <section>
+            <h3>4.8. Pagina Problema - Soluții</h3>
+            <p>
+              Această pagină conține un tabel cu cele mai bune trei soluții ale
+              utilizatorului (dacă există). Pentru fiecare soluție, la apăsarea
+              link-ului "See Solution" va apărea un popup unde este afișat codul
+              soluției respective.
+            </p>
+            <p>
+              De asemenea, sub tabel se găsește un buton numit "Vezi soluția
+              oficială". Acesta este blocat, iar pentru a-l debloca este necesar
+              un anumit număr de bani. Odată ce a fost deblocat, butonul va fi
+              accesibil întotdeauna pentru utilizator. Apăsând butonul, va
+              apărea un popup care va afișa atât mesajul de deblocare, cât și
+              soluția oficială, după ce aceasta a fost deblocată.
+            </p>
+          </section>
+          <section>
+            <h3>4.9. Pagina Creator Probleme</h3>
+            <p>
+              Această pagină conține toate problemele utilizatorului, împreună
+              cu statusul aferent (aprobat sau nu). Orice problemă poate fi
+              editată, fiind redirecționată către secțiunea de editare a
+              problemei (vezi 4.11). De asemenea, prin intermediul butonului
+              "plus" se poate crea o nouă problemă, fiind direcționat către
+              secțiunea de creare a unei noi probleme (vezi 4.10).
+            </p>
+          </section>
+          <section>
+            <h3>4.10. Pagina Creare Problema</h3>
+            <p>
+              Aceasta pagina contine un formualar cu toate datele necesare
+              problemei (titlu, tip, cerinta rezumat si intreg, indicatii,
+              solutie oficiala, main daca problema e de tip functie,
+              constrangeri de executie, categorie, output). Utilizatorul poate
+              introduce ce dace doreste, in limitele date. Se asemenea,
+              sectiunea pentru main template apare doar daca tipul functie este
+              selectat, in sens contrar el neffind vizibil. Atat pentru sursa
+              oficiala, cat si pentru main, codul introdus este colorat
+              corespunzator limbajului C++.
+            </p>
+            <p>
+              Prin apasarea butonului Creare se va crea noua problema, ce va
+              aparea adaugata in pagina de administrare a problemelor (vezi 4.)
+              cu statusul neaprobat.
+            </p>
+          </section>
+          <section>
+            <h3>4.11. Pagina Editare Problemă</h3>
+            <p>
+              Această pagină conține un formular identic cu cel de la crearea
+              problemei (vezi 4.10), cu excepția faptului că toate datele
+              problemei sunt deja completate în câmpurile formularului, dar pot
+              fi editate. După ce utilizatorul face modificările dorite, acestea
+              sunt salvate prin apăsarea butonului "Modificare". Problema este
+              apoi actualizată în pagina de administrare a problemelor (vezi
+              4.9), având statusul de neaprobat, indiferent de statusul ei
+              inițial.
+            </p>
+          </section>
+        </section>
+        <section>
+          <h2>Alte Cerințe Nefuncționale</h2>
+          <section>
+            <h3>5.1. Cerințe de Performanță</h3>
+            <ul>
+              <li>
+                Timp de răspuns: Aplicația trebuie să ofere un timp de răspuns
+                rapid pentru a asigura o experiență plăcută utilizatorilor.
+                Timpul de încărcare al paginilor și al funcționalităților cheie
+                trebuie să fie minim, ideal sub 3 secunde.
+              </li>
+              <li>
+                Scalabilitate: Aplicația trebuie să fie scalabilă pentru a face
+                față unui număr crescut de utilizatori simultani fără a afecta
+                performanța. Aceasta presupune o gestionare eficientă a
+                resurselor și a traficului.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>5.2. Cerințe de Siguranță</h3>
+            <p>
+              Aplicația trebuie să ofere o autentificare sigură pentru
+              utilizatori și să implementeze un sistem robust de autorizare
+              pentru a gestiona accesul la diferite funcționalități bazat pe
+              roluri. În acest sens, datele utilizatorilor sunt protejate
+              împotriva accesului neautorizat. Se vor implementa măsuri de
+              securitate precum criptarea datelor și controlul accesului la
+              informații sensibile.
+            </p>
+          </section>
+        </section>
+      </div>
+    </article>
+  </body>
+</html>
